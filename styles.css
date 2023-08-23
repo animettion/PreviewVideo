@@ -1,6 +1,6 @@
 /* Estilos para o corpo da página */
 body {
-  background-color: #202227; /* Cor de fundo desejada */
+  background-color: #202227;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: #eee;
@@ -12,11 +12,10 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 
 /* Estilos para o título da mídia */
@@ -37,13 +36,14 @@ body {
 /* Estilos para o contêiner da mídia */
 .media-container {
   width: calc(25% - 10px);
+  flex-grow: 1; /* Faz com que os itens preencham o espaço disponível */
   height: auto;
-  margin-bottom: 20px;
+  margin: 0 5px 20px; /* Espaçamento entre os itens */
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; 
 }
-
+/* Efeito de aumento de escala ao passar o mouse sobre o contêiner da mídia */
 /* Efeito de aumento de escala ao passar o mouse sobre o contêiner da mídia */
 .media-container:hover {
   transform: scale(1.05);
@@ -59,7 +59,135 @@ body {
   display: block;
 }
 
+.gallery.preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: flex-end;
+}
+
+/* Estilos para o contêiner de vídeo na seção "Videos Preview" */
+.media-container.preview {
+  width: calc(25% - 10px);
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de aumento de escala ao passar o mouse sobre o contêiner de vídeo */
+.media-container.preview:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para a imagem de visualização e o vídeo na seção "Videos Preview" */
+.image-preview.preview,
+.media-preview.preview {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+}
+
+/* Oculta o vídeo por padrão na seção "Videos Preview" */
+.media-preview.preview {
+  display: none;
+}
+
+/* Estilos para o modal */
+.modal.preview {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* Inicialmente oculto */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-content.preview {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close.preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
 /* Oculta a mídia de vídeo por padrão */
 .media-preview {
   display: none;
+}
+/* Estilos para o modal */
+/* Estilos para o modal */
+/* Estilos para o modal */
+/* Oculta a mídia de vídeo por padrão */
+/* Estilos para o modal */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* Inicialmente oculto */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.modal-content {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px; /* Largura máxima fixa */
+  height: 500px; /* Altura fixa */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: translate(0%, 0%); /* Ajuste de posição */
+  margin: auto; /* Centralize na tela */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Outros estilos CSS permanecem inalterados */
+
+
+/* Outros estilos CSS permanecem inalterados */
+
+/* Estilos para o player de vídeo dentro do modal */
+#fullVideo {
+  width: 800px; /* Largura fixa */
+  height: 450px; /* Altura fixa */
 }

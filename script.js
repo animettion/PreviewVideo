@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Itera sobre cada contêiner de mídia
   mediaContainers.forEach((container) => {
-    // Obtém a imagem de visualização e a mídia
+    // Obtém a imagem de visualização, a mídia e o título
     const imagePreview = container.querySelector(".image-preview");
     const mediaPreview = container.querySelector(".media-preview");
 
-    // Variável para rastrear se o preview está sendo reproduzido
+    // Variáveis para rastrear se o preview está sendo reproduzido e se o modal está aberto
     let isPreviewPlaying = false;
+    let isModalOpen = false;
 
     // Variável para controlar o tempo limite de visualização
     let timeout;
@@ -50,6 +51,56 @@ document.addEventListener("DOMContentLoaded", () => {
       isPreviewPlaying = false;
       imagePreview.style.display = "block";
     }
+
+    // Função para abrir o modal com o vídeo completo
+    function openModal() {
+      if (!isModalOpen) {
+        const modal = document.getElementById("videoModal");
+        const fullVideo = document.getElementById("fullVideo");
+        const closeModal = document.getElementById("closeModal");
+
+        // Preencha a origem do vídeo completo
+        const videoSrc = mediaPreview.querySelector("source").getAttribute("src");
+        fullVideo.querySelector("source").setAttribute("src", videoSrc);
+        fullVideo.load();
+
+        // Exiba o modal
+        modal.style.display = "block";
+        isModalOpen = true;
+
+        // Adicione um evento de clique ao botão de fechar o modal
+        closeModal.addEventListener("click", () => {
+          closeModalVideo();
+        });
+
+        // Feche o modal quando o usuário clicar fora dele
+        window.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closeModalVideo();
+          }
+        });
+      }
+    }
+
+    // Função para fechar o modal com o vídeo completo
+    function closeModalVideo() {
+      const modal = document.getElementById("videoModal");
+
+      // Pare o vídeo completo e limpe a origem
+      const fullVideo = document.getElementById("fullVideo");
+      fullVideo.pause();
+      fullVideo.querySelector("source").removeAttribute("src");
+      fullVideo.load();
+
+      // Oculte o modal
+      modal.style.display = "none";
+      isModalOpen = false;
+    }
+
+    // Adicione um evento de clique ao vídeo para abrir o modal
+    mediaPreview.addEventListener("click", () => {
+      openModal();
+    });
 
     // Evento quando o mouse entra no contêiner
     container.addEventListener("mouseenter", () => {

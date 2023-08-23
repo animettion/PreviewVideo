@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+
   <title>Video Preview Example</title>
 </head>
 <body>
   <!-- Cabeçalho para Vídeos Grandes -->
   <h2>Videos Grandes</h2>
-  <div class="gallery">
+  <div class="gallery gallery-large">
     <!-- Container de Mídia 1 -->
-    <div class="media-container">
+    <!-- Adicione a classe "video-trigger" para acionar o modal -->
+    <div class="media-container video-trigger">
       <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64dd5cfbd34e3ae5b8c4b854/360" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
         <source src="https://www.iol.pt/videos-file/b/a/6/3/64dd5a9f0cf2539120daba63-L-1000k.mp4" type="video/webm">
@@ -19,7 +23,8 @@
       <div class="media-title">Título do Vídeo</div>
     </div>
     <!-- Container de Mídia 2 -->
-    <div class="media-container">
+    <!-- Adicione a classe "video-trigger" para acionar o modal -->
+    <div class="media-container video-trigger">
       <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64dde129d34e67a6adb42dc7/200" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
         <source src="https://www.iol.pt/videos-file/5/9/9/4/64ddd60f0cf263c64cee5994-L-1000k.mp4" type="video/webm">
@@ -27,7 +32,7 @@
       <div class="media-title">Título do Vídeo</div>
     </div>
     <!-- Container de Mídia 3 -->
-    <div class="media-container">
+    <div class="media-container video-trigger">
       <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64dc7ffbd34e72171a0c2a66/" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
         <source src="https://www.iol.pt/videos-file/3/7/9/9/64dc1ecf0cf23765eb893799-L-1000k.mp4" type="video/webm">
@@ -35,10 +40,49 @@
       <div class="media-title">Título do Vídeo</div>
     </div>
     <!-- Container de Mídia 4 -->
-    <div class="media-container">
-      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64dd32f0d34e72171a0c31cf/" alt="Imagem" class="image-preview">
+    <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64e5cd38d34e65afa2f49cc0/" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
-        <source src="https://www.iol.pt/videos-file/b/3/3/d/64dd31610cf2539120dab33d-L-1000k.mp4" type="video/webm">
+        <source src="https://www.iol.pt/videos-file/9/5/6/7/64e564160cf2ebafa99b9567-L-1000k.mp4" type="video/webm">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+ </div>
+  <h2>Videos Medios</h2>
+  <div class="gallery gallery-medium">
+    <!-- Container de Mídia 1 -->
+    <!-- Adicione a classe "video-trigger" para acionar o modal -->
+   
+ <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/646558ecd34ef47b8753f948/" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="https://www.iol.pt/videos-file/4/6/8/6/6465564a0cf2cf9225074686-L-1000k.mp4" type="video/webm">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+  
+ <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64e5eb3cd34e371fc0b6ea8f/" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="https://www.iol.pt/videos-file/b/f/f/1/64e5df850cf25f99537fbff1-L-1000k.mp4" type="video/webm">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+ 
+
+ <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64d9454cd34e72171a0c1c85/" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="https://www.iol.pt/videos-file/4/d/7/7/64d9445e0cf2f892b4944d77-L-1000k.mp4" type="video/webm">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+  
+
+ <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64e52503d34e371fc0b6e72b/" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="https://www.iol.pt/videos-file/3/d/b/5/64e4fd300cf265bc967d3db5-L-1000k.mp4" type="video/webm">
       </video>
       <div class="media-title">Título do Vídeo</div>
     </div>
@@ -46,17 +90,18 @@
 
   <!-- Cabeçalho para Vídeos Pequenos -->
   <h2>Videos Pequenos</h2>
-  <div class="gallery">
+  <div class="gallery gallery-small">
     <!-- Container de Mídia 5 -->
-    <div class="media-container">
-      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/6256cc030cf2ea367d35f6c1/" alt="Imagem" class="image-preview">
+    <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64dd32f0d34e72171a0c31cf/" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
-        <source src="https://www.iol.pt/videos-file/7/c/1/0/6256be8d0cf2ea4f0a447c10-L-1000k.mp4" type="video/webm">
+        <source src="https://www.iol.pt/videos-file/b/3/3/d/64dd31610cf2539120dab33d-L-1000k.mp4" type="video/webm">
       </video>
       <div class="media-title">Título do Vídeo</div>
     </div>
+  
     <!-- Container de Mídia 6 -->
-    <div class="media-container">
+    <div class="media-container video-trigger">
       <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/636eb97d0cf255d6e139f991/" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
         <source src="https://www.iol.pt/videos-file/3/c/b/4/6256be900cf2f9a86e9e3cb4-L-1000k.mp4" type="video/webm">
@@ -64,7 +109,7 @@
       <div class="media-title">Título do Vídeo</div>
     </div>
     <!-- Container de Mídia 7 -->
-    <div class="media-container">
+    <div class="media-container video-trigger">
       <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/63639ae40cf2ea367d56aa83/" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
         <source src="https://www.iol.pt/videos-file/e/c/2/d/63639aa60cf26256cd3dec2d-L-1000k.mp4" type="video/webm">
@@ -72,10 +117,10 @@
       <div class="media-title">Título do Vídeo</div>
     </div>
     <!-- Container de Mídia 8 -->
-    <div class="media-container">
-      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/62d6f9500cf2ea367d463fff/" alt="Imagem" class="image-preview">
+    <div class="media-container video-trigger">
+      <img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/64e11d49d34e65afa2f48462/" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
-        <source src="https://www.iol.pt/videos-file/3/b/2/f/62b1ef9c0cf26256cd2a3b2f-L-1000k.mp4" type="video/webm">
+        <source src="https://www.iol.pt/videos-file/3/c/7/6/64e11afd0cf2ebafa99b3c76-L-1000k.mp4" type="video/webm">
       </video>
       <div class="media-title">Título do Vídeo</div>
     </div>
@@ -83,16 +128,49 @@
 
   <!-- Cabeçalho para Vídeos Preview -->
   <h2>Videos Preview</h2>
-  <div class="gallery">
+  <div class="gallery gallery-preview">
     <!-- Container de Mídia 9 -->
-    <div class="media-container">
-      <img src="https://www.ets.org/content/dam/ets-org/general/placeholders/thumbnail-placeholder.jpg" alt="Imagem" class="image-preview">
+    <div class="media-container video-trigger">
+      <img src="http://www.iol.pt/videos-file/63935e9b0cf27230dc1c7e5d/The%20Last%20of%20Us%20Official-thumb.0000004.jpg" alt="Imagem" class="image-preview">
       <video class="media-preview" preload="none" muted>
-        <source src="teste.mp4" type="video/mp4">
+        <source src="teste1.mp4" type="video/mp4">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+  <div class="media-container video-trigger">
+      <img src="http://www.iol.pt/videos-file/63935e9b0cf27230dc1c7e5d/The%20Last%20of%20Us%20Official-thumb.0000003.jpg" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="teste2.mp4" type="video/mp4">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+  <div class="media-container video-trigger">
+      <img src="http://www.iol.pt/videos-file/63935e9b0cf27230dc1c7e5d/The%20Last%20of%20Us%20Official-thumb.0000005.jpg" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="teste3.mp4" type="video/mp4">
+      </video>
+      <div class="media-title">Título do Vídeo</div>
+    </div>
+  <div class="media-container video-trigger">
+      <img src="http://www.iol.pt/videos-file/63935e9b0cf27230dc1c7e5d/The%20Last%20of%20Us%20Official-thumb.0000006.jpg" alt="Imagem" class="image-preview">
+      <video class="media-preview" preload="none" muted>
+        <source src="teste4.mp4" type="video/mp4">
       </video>
       <div class="media-title">Título do Vídeo</div>
     </div>
   </div>
+
+<!-- Adicione um modal para exibir o vídeo completo -->
+<div class="modal" id="videoModal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <video id="fullVideo" controls>
+      <!-- Inclua aqui a origem do vídeo completo -->
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
+
 
   <!-- Inclusão de script JavaScript -->
   <script src="script.js"></script>
